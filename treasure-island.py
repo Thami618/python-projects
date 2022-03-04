@@ -1,19 +1,23 @@
-
-print("Welcome to trasure island, lets play!!")
-which_way = input("Which Way do you want to go? L or R\n").lower()
-swim_or_wait = input("Do you want to swim or wait\n").lower()
-which_door = input("Which do R B Y?\n").lower()
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
 
 
-if which_way == "Left":
-    if swim_or_wait == "Wait":
-        if which_door == "Yellow":
-             print("You win") 
-        elif which_door == "Blue":
-            print("Game Over")
-        elif which_door == "Red":
-            print("Game Over")
-    elif swim_or_wait == "Swim":
-        print("Game Over")
+
+choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
+if choice1 == "left":
+  choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
+  if choice2 == "wait":
+    choice3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower()
+    if choice3 == "red":
+      print("It's a room full of fire. Game Over.")
+    elif choice3 == "yellow":
+      print("You found the treasure! You Win!")
+    elif choice3 == "blue":
+      print("You enter a room of beasts. Game Over.")
+    else:
+      print("You chose a door that doesn't exist. Game Over.")
+  else:
+    print("You get attacked by an angry trout. Game Over.")
 else:
-    print("Game Over")
+  print("You fell into a hole. Game Over.")
+
