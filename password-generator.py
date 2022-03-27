@@ -33,7 +33,7 @@ for char in range(1, nr_numbers):
     password_list += random.choice(numbers)
 
 random.shuffle(password_list)
-print(password_list)
+#print(password_list)
 
 #changing to string
 passwrd = ""
